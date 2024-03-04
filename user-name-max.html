@@ -1,0 +1,500 @@
+<!--
+
+button search : info of progress
+
+flex inside flex
+	space around property
+
+
+css child navigation : >
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>user-name-max</title>
+<link rel="icon" href="fav32.png">
+
+
+
+<style type="text/css">
+	
+*
+{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+
+	text-decoration: none;
+}
+
+
+body
+{
+	background-color: #222;
+}
+
+
+._BOX_0_0_
+{
+	display: flex;
+	width: calc(100vw /* - 2 * (0.5rem + 2px) */ - 2rem);
+	max-width: 60rem;
+
+	margin: 1rem auto;
+}
+
+
+._BOX_0_0_ > textarea
+{
+
+	display: block;
+
+	padding: 0.5rem;
+
+	background-color: transparent;
+	width: calc(100vw - 2rem);
+	max-width: 60rem;
+
+	border: 1px solid #555;
+
+	color: #eee;
+	font-family: monospace;
+	font-weight: bold;
+
+	font-size: 0.8rem;
+
+	min-height: 3rem;
+	max-height: 100vh;
+	resize: vertical;
+}
+
+
+
+
+._BOX_1_
+{
+	display: flex;
+	justify-content: space-between;
+
+	margin: 1rem auto;
+	background-color: transparent;
+	width: calc(100vw /* - 2 * (0.5rem + 2px) */ - 2rem);
+	max-width: 60rem;
+}
+
+.file-name
+{
+	display: block;
+	padding: 0.5rem;
+	background-color: transparent;
+
+	color: #eee;
+	font-family: monospace;
+	font-weight: bold;
+
+	font-size: 0.8rem;
+	border: 1px solid #555;
+
+	width: 25rem;
+}
+
+.create
+{
+	display: block;
+
+	padding: 0.5rem;
+	border: 1px solid #555;
+
+	width: fit-content;
+
+	color: #eee;
+	font-family: monospace;
+	font-weight: bold;
+
+	font-size: 0.8rem;
+
+	user-select: none;
+}
+
+
+
+._BOX_2_
+{
+	display: flex;
+	justify-content: space-between;
+
+	margin: 1rem auto;
+	background-color: transparent;
+	width: calc(100vw /* - 2 * (0.5rem + 2px) */ - 2rem);
+	max-width: 60rem;
+}
+
+
+.fetch
+{
+	display: block;
+
+	padding: 0.5rem;
+	border: 1px solid #555;
+
+	width: fit-content;
+
+	color: #eee;
+	font-family: monospace;
+	font-weight: bold;
+
+	font-size: 0.8rem;
+
+	user-select: none;
+}
+
+._BOX_2_ > ._BOX_2_0_
+{
+	display: flex;
+	justify-content: space-between;
+
+	background-color: transparent;
+	width: fit-content;
+}
+
+.search-file-name
+{
+	display: block;
+	padding: 0.5rem;
+	background-color: transparent;
+
+	color: #eee;
+	font-family: monospace;
+	font-weight: bold;
+
+	font-size: 0.8rem;
+	border: 1px solid #555;
+
+	width: 15rem;
+}
+
+
+.nav
+{
+	display: block;
+
+	padding: 0.5rem;
+	border: 1px solid #555;
+
+	width: fit-content;
+
+	color: #eee;
+	font-family: monospace;
+	font-weight: bold;
+
+	font-size: 0.8rem;
+
+	user-select: none;
+}
+
+
+.fetch-result
+{
+	display: block;
+
+	margin: 1rem auto;
+	padding: 0.5rem;
+
+	background-color: transparent;
+	width: calc(100vw /* - 2 * (0.5rem + 2px) */ - 2rem);
+	max-width: 60rem;
+
+	border: 1px solid #555;
+
+	color: #eee;
+	font-family: monospace;
+	font-weight: bold;
+
+	font-size: 0.8rem;
+}
+
+
+.fetch-content-container
+{
+
+}
+
+
+.fetch-file
+{
+	display: block;
+
+	margin: 1rem auto 3px auto;
+
+	width: calc(100vw /* - 2 * (0.5rem + 2px) */ - 2rem);
+	max-width: 60rem;
+
+	border: 1px solid #333;
+
+	color: #eee;
+	font-family: monospace;
+
+	font-size: 0.8rem;
+}
+
+.fetch-file > div
+{
+	display: block;
+
+	padding: 0.5rem;
+
+	background-color: transparent;
+	width: fit-content;
+
+	border: 1px solid #aa0000;
+
+	color: #eee;
+	font-family: monospace;
+
+	font-size: 0.8rem;
+}
+
+
+.fetch-content
+{
+	display: block;
+
+	margin: 3px auto 1rem auto;
+	padding: 0.5rem;
+
+	background-color: transparent;
+	width: calc(100vw /* - 2 * (0.5rem + 2px) */ - 2rem);
+	max-width: 60rem;
+
+	border: 1px solid #555;
+
+	color: #eee;
+	font-family: monospace;
+
+	font-size: 0.8rem;
+
+	resize: vertical;
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<div class="_BOX_1_">
+	<input class="file-name" placeholder="file-name (name)"> 
+	<div class="create">create</div>
+</div>
+
+
+<div class="_BOX_0_0_">
+	<textarea rows="15" wrap="off" class="file-content" placeholder="file-content (val)" ></textarea> 
+</div>
+
+<div class="_BOX_2_">
+	<div class="fetch">fetch all</div>	
+	<div class = "_BOX_2_0_">
+		<input class="search-file-name" placeholder="search-field- (name)"> 
+		<div class="nav">..</div>
+	</div>
+	<div class = "_BOX_2_0_">
+		<div class="nav">&lt;</div>
+		<div class="nav">&gt;</div>
+	</div>
+</div>
+
+
+<div class = "fetch-content-container">
+	
+
+</div>
+
+
+
+
+<script type="text/javascript">
+	
+function _A(L)
+{
+	document.querySelector(".fetch-content-container").innerHTML = "";
+
+	for(let i0 = 1 ; i0 <= L.length - 2; i0 += 2)
+	{
+		// let text_node = document.createTextNode(L[i0]);
+
+
+
+
+		/* 
+			<div>		file-name
+			<textarea>	file-content
+		*/
+
+		let node_file_name = document.createElement("div");
+		let node = document.createElement("textarea")
+
+
+		node_file_name.innerHTML = "<div>" + L[i0] + "</div>";
+		node_file_name.setAttribute("class" , "fetch-file");
+
+		node.value = L[i0 + 1];
+		node.setAttribute("class" , "fetch-content");
+
+		let lines = L[i0 + 1].split('\n').length;
+		if(lines > 10)
+		{
+			lines = 10;
+		}
+		node.setAttribute("rows" , lines);
+		node.setAttribute("wrap" , "off");
+
+		// node.appendChild(text_node);
+
+		document.querySelector(".fetch-content-container").appendChild(node_file_name);
+		document.querySelector(".fetch-content-container").appendChild(node);
+	}
+
+
+	console.log("somthng");
+}
+
+
+// select 	insert 	update
+// fetch 	create 	edit
+
+
+
+document.querySelector(".create").onclick = function()
+{
+	console.log("clicked .... create");
+
+	let req = "i";
+	let val = document.querySelector(".file-content").value;
+	let name = document.querySelector(".file-name").value;
+	let id = '';
+
+	let form = new FormData();
+	form.append("req", req);
+	form.append("val", val);
+	form.append("name", name);
+	form.append("id" , id);
+
+
+
+	function send_the_req()
+	{
+		console.log("sent - req")
+
+		let xhr = new XMLHttpRequest();
+		xhr.open('POST', 'data_0.php', true);
+
+		let doc_progress = document.querySelector(".create");
+		xhr.onprogress = function(e)
+		{
+			let t = (e.loaded / e.total );
+			console.log(t * 100);
+			doc_progress.innerHTML = "loading.... " + (t * 100) + "%";
+		}
+
+		xhr.onload = function () 
+		{
+			let resp = this.responseText;
+
+		    setTimeout( 
+		    	function () 
+		    	{ 
+		    		doc_progress.innerHTML = "done"; 
+		    		setTimeout( function() {doc_progress.innerHTML = "create";} , 500 );
+		    	} 
+			    , 300 
+ 			);
+
+
+		}
+
+		xhr.send(form);
+	}
+
+
+	if(name != '' && val != '')
+	{
+		send_the_req();
+	}
+	else
+	{
+		console.log("not fill cant send");
+		console.log(name);
+		console.log(val);
+
+		let doc_progress = document.querySelector(".create");
+		doc_progress.innerHTML = "> make sure to keep it fill..";
+
+		// setTimeout( function() {doc_progress.innerHTML = "ok";} , 2000 );
+
+		setTimeout( function() {doc_progress.innerHTML = "> do that and try again.."; setTimeout( function() {doc_progress.innerHTML = "create";} , 1200 );} , 1500 );
+	}
+
+}
+
+
+
+document.querySelector(".fetch").onclick = function()
+{
+	console.log("clicked .... ");
+
+	let req = "s";
+	let val = '';
+	let id = '';
+
+	let form = new FormData();
+	form.append("req", req);
+	form.append("val", val);
+	form.append("id" , id);
+
+
+	let xhr = new XMLHttpRequest();
+	xhr.open('POST', 'data_0.php', true);
+
+	let doc_progress = document.querySelector(".fetch");
+	xhr.onprogress = function(e)
+	{
+		let t = (e.loaded / e.total );
+		console.log(t * 100);
+		doc_progress.innerHTML = "loading.... " + (t * 100) + "%";
+	}
+
+	xhr.onload = function () 
+	{
+		let resp = this.responseText;
+
+		let L = resp.split("<~>");
+	    console.log(L);
+	    _A(L);
+
+
+
+	    setTimeout( function() {doc_progress.innerHTML = "> want to fetch all again ? ...."; setTimeout( function() {doc_progress.innerHTML = "fetch all";} , 1200 );} , 1500 );
+	};
+
+	xhr.send(form);
+}
+
+</script>
+
+
+
+</body>
+</html>
